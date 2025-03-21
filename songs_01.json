@@ -1,4 +1,4 @@
-let songs = [
+[
   {
     "name": "4K6o4K6h4K6A4KCj4K6J4KKq4K6K",
     "lyrics": "4K6f4KCf4KO64KKy4K6Z4KCA4KCk4K6f4KOY4K6c4KCz4KCf4KKk4K6f4KOY4KCW4K6V"
@@ -11,16 +11,4 @@ let songs = [
     "name": "4K6Y4KKq4KCk4KKg4K6T4K6V4K6g4KCc",
     "lyrics": "4K6f4KK3 4K6Z4K6b4KCp4K6f4KC4 4K6N4KOJ4K6f4KKp4K6L4K6h4KCw"
   }
-];
-
-function decodeBase64(str) {
-    return decodeURIComponent(escape(atob(str)));
-}
-
-songs.forEach(song => {
-    song.name = decodeBase64(song.name);
-    song.lyrics = decodeBase64(song.lyrics);
-});
-
-console.log(songs);
-
+]
