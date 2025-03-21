@@ -1,0 +1,5 @@
+const songs = [ 
+    { "name": "গান ১", "lyrics": "গানের কথা ১..." }, 
+    { "name": "গান ২", "lyrics": "গানের কথা ২..." } 
+]; 
+console.log(btoa(JSON.stringify(songs))); 
