@@ -1,16 +1,26 @@
-[
-    {
-      "name": "আমার সোনার বাংলা",
-      "lyrics": "আমার সোনার বাংলা\nআমি তোমায় ভালোবাসি।\nচিরদিন তোমার আকাশ, তোমার বাতাস\nআমার প্রাণে বাজায় বাঁশি..."
-    },
-    {
-      "name": "একটি বাংলাদেশ",
-      "lyrics": "একটি বাংলাদেশ তুমি জাগ্রত জনতার\nসারা বিশ্বের বিস্ময় তুমি আমার অহংকার..."
-    },
-    {
-      "name": "সুন্দর সুবর্ণ",
-      "lyrics": "সুন্দর সুবর্ণ আমার দেশ\nসবুজ শ্যামল ভূমি\nআমি তোমায় ভালোবাসি\nতুমি আমার জননী..."
-    }
-   
-  ]
-  
+let songs = [
+  {
+    "name": "4K6o4K6h4K6A4KCj4K6J4KKq4K6K",
+    "lyrics": "4K6f4KCf4KO64KKy4K6Z4KCA4KCk4K6f4KOY4K6c4KCz4KCf4KKk4K6f4KOY4KCW4K6V"
+  },
+  {
+    "name": "4K6V4K6T4K6Q4K6l4KOE4KCp4K6h4K6d4KK2",
+    "lyrics": "4K6h4K6U4KOz4K6V4K6y4KCz4K6f4K6k4KKV4K6g4KCQ4K6a4KCh4KC4"
+  },
+  {
+    "name": "4K6Y4KKq4KCk4KKg4K6T4K6V4K6g4KCc",
+    "lyrics": "4K6f4KK3 4K6Z4K6b4KCp4K6f4KC4 4K6N4KOJ4K6f4KKp4K6L4K6h4KCw"
+  }
+];
+
+function decodeBase64(str) {
+    return decodeURIComponent(escape(atob(str)));
+}
+
+songs.forEach(song => {
+    song.name = decodeBase64(song.name);
+    song.lyrics = decodeBase64(song.lyrics);
+});
+
+console.log(songs);
+
